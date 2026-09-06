@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Online Food Ordering System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6347; /* Tomato color */
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .menu-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 15px;
+            padding: 15px;
+            width: 250px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .menu-item h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .menu-item p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .menu-item .price {
+            font-size: 1.2em;
+            color: #ff6347; /* Tomato color */
+            margin: 10px 0;
+        }
+
+        .order-button {
+            background-color: #ff6347; /* Tomato color */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .order-button:hover {
+            background-color: #e5533d; /* Darker tomato color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Menu</h1>
+    </header>
+    <div class="menu-container">
+	   <form class= method="POST" action="menuconnection.php"></form>
+        <div class="menu-item">
+            <img src="C:\Users\Lenovo\OneDrive\Desktop\html\onlinefood ordering\pizza.jpeg" alt="pizza">
+            <h2>Margherita Pizza</h2>
+            <p>Classic pizza with fresh mozzarella, tomatoes, and basil.</p>
+            <div class="price">129/-</div>
+			<A HREF="order.html">
+            <button class="order-button">Order Now</button>
+		    </A>
+        </div>
+        <div class="menu-item">
+            <img src="C:\Users\Lenovo\OneDrive\Desktop\html\onlinefood ordering\burger.jpeg" alt="Burger">
+            <h2>Cheeseburger</h2>
+            <p>Juicy chicken patty with cheese, lettuce, and tomato.</p>
+            <div class="price">99/-</div>
+			<A HREF="order1.html">
+			
+            <button class="order-button">Order Now</button>
+			
+			</A>
+        </div>
+        <div class="menu-item">
+            <img src="C:\Users\Lenovo\OneDrive\Desktop\html\onlinefood ordering\frenchfries.jpeg" alt="fries">
+            <h2>french fries</h2>
+            <p>Classic Italian fries with creamy sauce and pancetta.</p>
+            <div class="price">49/-</div>
+			<A HREF="order2.html">
+			
+            <button class="order-button">Order Now</button>
+			
+			
+			</A>
+        </div>
+        <div class="menu-item">
+            <img src="C:\Users\Lenovo\OneDrive\Desktop\html\onlinefood ordering\salad.jpg" alt="Salad">
+            <h2>Caesar Salad</h2>
+            <p>Fresh romaine lettuce with Caesar dressing and croutons.</p>
+            <div class="price">120/-</div>
+			<A HREF="order3.html">
+			
+            <button class="order-button">Order Now</button>
+		
+			</A>
+        </div>
+        <div class="menu-item">
+            <img src="C:\Users\Lenovo\OneDrive\Desktop\html\onlinefood ordering\mojito.jpg" alt="Salad">
+		    <h2>mojito</h2>
+            <p>Fresh colling drink conating lemon .</p>
+            <div class="price">89/-</div>
+			<A HREF="order4.html">			
+            <button class="order-button">Order Now</button>			
+			</A>
+        </div>  
+        <div class="menu-item">
+            <img src="C:\Users\Lenovo\OneDrive\Desktop\html\onlinefood ordering\jamun.jpeg" alt="jamun">
+		    <h2>icecream with gulabjamun</h2>
+            <p>Fresh gulab jamun with icecream combines the sweetness and cool .</p>
+            <div class="price">40/-</div>
+			<A HREF="order5.html">
+			
+             <button class="order-button">Order Now</button>
+			
+            </A>
+        </div>	
+        <div class="menu-item">
+            <img src="C:\Users\Lenovo\OneDrive\Desktop\html\onlinefood ordering\roll.jpg" alt="Salad">
+		    <h2>chicken rolls</h2>
+            <p>hot and crispy to bite .</p>
+            <div class="price">49/-</div>
+			<A HREF="order6.html">
+			
+        	<button class="order-button">Order Now</button>	
+			
+		    </A>
+		</div>
+		<div class="menu-item">
+            <img src="C:\Users\Lenovo\OneDrive\Desktop\html\onlinefood ordering\waffle.jpeg" alt="Salad">
+		    <h2>waffles</h2>
+            <p>very crispy to taste containing waffle layers .</p>
+            <div class="price">109/-</div>
+			<A HREF="order7.html">
+			
+		    <button class="order-button">Order Now</button>
+		
+			</A>
+		</div>	
+</body>
+</html>

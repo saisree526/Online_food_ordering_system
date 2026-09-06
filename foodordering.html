@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Ordering System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: darkpink;
+            background-image: url('logo2.jpeg'); /* Ensure the correct image path */
+            background-size: cover;
+            background-position: center;
+            background-color: pink;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .navbar {
+            position: absolute;
+            background-color: white;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            display: flex;
+            color: black;
+            padding: 10px 10px;
+            border-radius: 10px 0px 10px 0px;
+            text-align: center;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+            letter-spacing: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            align-content: top;
+            padding: 10px 15px;
+            margin: 0px 5px;
+        }
+
+        .navbar a:hover {
+            background-color: lightgray;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            word-spacing: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .enter {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: darkpink;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .enter:hover {
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#index">Home</a>
+        <a href="about.html">About</a>
+        <a href="location.html">Location</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="content">
+        <form class="login-form" id="loginForm" method="POST" action="login.php"></form>
+        <h1>Welcome to Our Online Food</h1>
+        <h1>Ordering System!</h1>
+        <p>"Food is the ingredient that binds us together."</p>
+        <a href="login.html">
+            <button class="enter">Login</button>
+        </a>
+        <a href="menu.html">
+            <button class="enter">Menu</button>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Online Food Ordering System</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-image: url('your-background-image.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-form {
+            background: rgba(255, 255, 255, 0.9); /* White background with some transparency */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        .signup-form h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #FF5722; /* A food-related color */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .signup-form button:hover {
+            background-color: #E64A19; /* Darker shade on hover */
+        }
+
+        .signup-form p {
+            margin-top: 15px;
+            color: #555;
+        }
+
+        .signup-form a {
+            color: #FF5722; /* Link color */
+            text-decoration: none;
+        }
+
+        .signup-form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function handleSignUp(event) {
+            event.preventDefault(); // Prevent the default form submission
+            alert("Your account has been created successfully!"); // Display the success message
+            window.location.href = "menu.html"; // Redirect to the menu page
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form class="signup-form" onsubmit="handleSignUp(event)">
+            <h2>Create an Account</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account?</p>
+            <p>
+                <a href="login3.html">Login</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

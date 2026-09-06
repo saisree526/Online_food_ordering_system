@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Online Food Ordering System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: rgba(255, 99, 71, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        h1 {
+            margin: 0;
+        }
+        .cart-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .form-field {
+            margin: 10px 0;
+        }
+        .form-field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-field input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .order-button {
+            display: block;
+            width: 100%;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .order-button:hover {
+            background-color: #e5533d;
+        }
+        .confirmation-container {
+            font-size: 1.2em;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function displayOrderDetails() {
+            // Get user input values
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const contact = document.getElementById("contact").value.trim();
+            const quantity = document.getElementById("quantity").value.trim();
+
+            // Validate inputs
+            let errorMessage = "";
+            if (name === "") {
+                errorMessage += "Name is required. ";
+            }
+            if (email === "") {
+                errorMessage += "Email is required. ";
+            }
+            if (contact === "") {
+                errorMessage += "Contact number is required. ";
+            }
+            if (quantity === "" || quantity <= 0) {
+                errorMessage += "Quantity must be at least 1. ";
+            }
+
+            const errorContainer = document.getElementById("error");
+            if (errorMessage !== "") {
+                // Display error message
+                errorContainer.textContent = errorMessage;
+                errorContainer.style.display = "block";
+                return; // Stop further processing
+            } else {
+                // Clear error message
+                errorContainer.textContent = "";
+                errorContainer.style.display = "none";
+            }
+
+            // Static data for item
+            const itemName = "Caesar Salad";
+            const itemPrice = 120; // Price per item
+            const total = itemPrice * quantity;
+
+            // Update confirmation container with the details
+            const confirmationContainer = document.getElementById("confirmation");
+            confirmationContainer.innerHTML = `
+                <h2>Order Confirmation</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <td>${name}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>${email}</td>
+                    </tr>
+                    <tr>
+                        <th>Contact</th>
+                        <td>${contact}</td>
+                    </tr>
+                    <tr>
+                        <th>Ordered Item</th>
+                        <td>${itemName}</td>
+                    </tr>
+                    <tr>
+                        <th>Quantity</th>
+                        <td>${quantity}</td>
+                    </tr>
+                    <tr>
+                        <th>Total Price</th>
+                        <td>${total}/-</td>
+                    </tr>
+                </table>
+            `;
+            confirmationContainer.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+    </header>
+    <div class="cart-container">
+        <div id="error" class="error-message" style="display: none;"></div>
+        <div class="form-field">
+            <label for="name">Name:</label>
+            <input id="name" type="text" placeholder="Enter your name">
+        </div>
+        <div class="form-field">
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="Enter your email">
+        </div>
+        <div class="form-field">
+            <label for="contact">Contact:</label>
+            <input id="contact" type="text" placeholder="Enter your contact number">
+        </div>
+        <div class="form-field">
+            <label for="quantity">Quantity:</label>
+            <input id="quantity" type="number" value="1" min="1">
+        </div>
+        <button class="order-button" onclick="displayOrderDetails()">Order Now</button>
+    </div>
+    <div id="confirmation" class="confirmation-container" style="display: none;"></div>
+</body>
+</html>

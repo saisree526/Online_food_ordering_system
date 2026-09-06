@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Online Food Ordering System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: rgba(255, 99, 71, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        h1 {
+            margin: 0;
+        }
+        .cart-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .cart-item h2 {
+            flex: 1;
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .cart-item .quantity {
+            margin-right: 20px;
+        }
+        .cart-item .price {
+            font-weight: bold;
+            color: #ff6347;
+        }
+        .confirmation-container {
+            font-size: 1.2em;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .order-button {
+            display: block;
+            width: 100%;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .order-button:hover {
+            background-color: #e5533d;
+        }
+    </style>
+    <script>
+        function displayOrderDetails() {
+            const quantity = document.getElementById("quantity").value;
+            const itemName = "icecream with Gulabjamun";
+            const itemPrice = 40;
+            const total = itemPrice * quantity;
+
+            // User details (can be customized as needed)
+            const name = "Sai";
+            const email = "sai@example.com";
+            const contact = "1234567890";
+
+            const confirmationContainer = document.getElementById("confirmation");
+            confirmationContainer.innerHTML = `
+                <h2>Order Confirmation</h2>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Contact:</strong> ${contact}</p>
+                <p><strong>Ordered Item:</strong> ${itemName}</p>
+                <p><strong>Quantity:</strong> ${quantity}</p>
+                <p><strong>Total Price:</strong> ${total}/-</p>
+            `;
+            confirmationContainer.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+    </header>
+    <div class="cart-container">
+        <div class="cart-item">
+            <img src="jamun.jpg" alt="Icecream with Gulabjamun">
+            <h2>Icecream with Gulabjamun</h2>
+            <div class="quantity">
+                Quantity: 
+                <input id="quantity" type="number" value="1" min="1">
+            </div>
+            <div class="price">40/- per item</div>
+        </div>
+        <button class="order-button" onclick="displayOrderDetails()">Order Now</button>
+    </div>
+    <div id="confirmation" class="confirmation-container" style="display: none;"></div>
+</body>
+</html>

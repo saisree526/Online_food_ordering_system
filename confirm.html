@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+        }
+
+        .confirmation-container {
+            text-align: center;
+            padding: 100px;
+			<img src: "C:\Users\Lenovo\OneDrive\Desktop\html\food.jpeg";
+            background-color: light blue;
+            border-radius: 20px;
+            box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .thank-you {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .order-details {
+            margin-bottom: 30px;
+        }
+
+        .order-details p {
+            margin: 8px 0;
+        }
+
+        .confirm-button {
+            background-color: blue;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.1s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .confirm-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .confirm-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+        }
+
+        .confirm-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .sparkle{
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          background: white;
+          border-radius: 50%;
+          animation: sparkleAnimation 1s infinite alternate;
+        }
+
+        @keyframes sparkleAnimation {
+          0% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1.5);
+            opacity: 0.5;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="thank-you">
+            Thank you for your order! We appreciate your patronage.
+        </div>
+        <div class="order-details">
+            <p><strong>Order Number:</strong> #12345</p>
+            <p><strong>Estimated Delivery Time:</strong> 30-45 minutes</p>
+            
+           
+        </div>
+		
+        <button class="confirm-button" id="confirmButton">
+            Order Confirmed
+            <div class="sparkle" style="top: 10px; left: 10px;"></div>
+            <div class="sparkle" style="top: 30px; right: 10px;"></div>
+            <div class="sparkle" style="bottom: 10px; left: 20px;"></div>
+            <div class="sparkle" style="bottom: 30px; right: 20px;"></div>
+			
+        </button>
+    </div>
+
+    <script>
+      const confirmButton = document.getElementById('confirmButton');
+
+      confirmButton.addEventListener('click', () => {
+        // Add any actions you want to perform when the button is clicked,
+        // such as redirecting to a tracking page or showing a modal.
+        console.log('Order confirmed!');
+      });
+    </script>
+</body>
+</html>
